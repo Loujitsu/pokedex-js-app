@@ -1,4 +1,5 @@
-pokemonList = [{
+let pokemonList = [
+  {
   name: 'Articuno',
   height: 1.7,
   weight: 55.4,
@@ -17,7 +18,7 @@ pokemonList = [{
   type: ['fire', 'flying']
 },
 {
-  name: : 'Lugia',
+  name: 'Lugia',
   height: 5.2,
   weight: 216,
   type: ['pyschic', 'flying']
@@ -29,3 +30,12 @@ pokemonList = [{
   type: ['fire', 'flying']
 }
 ]
+
+
+for (let i=0; i < pokemonList.length; i++){
+  if(pokemonList[i].height > 5){
+    document.write(pokemonList[i].name + '(height : '+ pokemonList[i].height +')' + 'Wow that\'s big!!!')
+  } else{
+    document.write(pokemonList[i].name + '( height : ' + pokemonList[i].height + ')')
+  }
+}
