@@ -3,7 +3,7 @@ let pokemonList = [
   name: 'Articuno',
   height: 1.7,
   weight: 55.4,
-  type: ['fire', 'flying']
+  type: ['ice', 'flying']
 },
 {
   name: 'Zaptos',
@@ -31,6 +31,54 @@ let pokemonList = [
 }
 ]
 
+let pokemonRepository = (function () {
+  
+  let pokemonList = [
+      {
+      name: 'Articuno',
+      height: 1.7,
+      weight: 55.4,
+      type: ['ice', 'flying']
+    },
+    {
+      name: 'Zaptos',
+      height: 1.6,
+      weight: 52.6,
+      type: ['electric', 'flying']
+    },
+    {
+      name: 'Moltres',
+      height: 2,
+      weight: 60,
+      type: ['fire', 'flying']
+    },
+    {
+      name: 'Lugia',
+      height: 5.2,
+      weight: 216,
+      type: ['pyschic', 'flying']
+    },
+    {
+      name: 'Ho-oh',
+      height: 3.8,
+      weight: 199,
+      type: ['fire', 'flying']
+    }
+  ]
+
+  function getAll () {
+    return pokemonList;
+  }
+  function add (pokemon) {
+    pokemonList.push(pokemon);
+  }
+
+  return {
+    getAll: getAll,
+    add: add
+  }
+})();
+
 
 for (let i=0; i < pokemonList.length; i++){
   if(pokemonList[i].height > 5){
@@ -39,3 +87,11 @@ for (let i=0; i < pokemonList.length; i++){
     document.write(pokemonList[i].name + '( height : ' + pokemonList[i].height + ')')
   }
 }
+
+
+pokemonList.forEach(function (pokemon) {
+  console.log(pokemon.name + pokemon.height + pokemon.weight + pokemon.type);
+});
+
+console.log(pokemonRepository.getAll())
+pokemonRepository.add({name: 'Pikachu'});
