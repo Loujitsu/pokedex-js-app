@@ -1,0 +1,149 @@
+/* CSS Variables */
+:root {
+    --primary-color: #0f84ec;
+    --secondary-color: #fff;
+    --background-color: rgb(246, 169, 169);
+    --black: #000;
+    --modal-close-color: rgb(22, 129, 102);
+    --dark: #333947;
+    --hover: rgb(7, 214, 0);
+  }
+  
+  /* adds container to the whole web page */
+  .container {
+    margin: auto;
+    width: 100%;
+    max-width: 1200px;
+    background-color: var(--dark);
+    border: var(--black) solid 5px;
+    border-radius: 25px;
+  }
+  
+  /* styles the whole webpage throught the body tag */
+  body {
+    margin: 10%;
+    margin-top: 2%;
+    padding: 25px;
+    background-color: var(--background-color);
+    font-family: "Domine", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  
+  /* header style */
+  header {
+    border-top: var(--dark) solid 10px;
+    border-bottom: var(--black) solid 2px;
+  }
+  
+  h1 {
+    color: var(--secondary-color);
+  }
+  
+  /* button styles */
+  .btn,
+  .btn-primary {
+    position: relative;
+    font-family: inherit;
+    color: var(--secondary-color);
+    width: 100%;
+    height: 75px;
+    text-align: center;
+    line-height: 63px;
+    font-size: 15px;
+    background: var(--primary-color);
+    border: 2px solid var(--black);
+    border-radius: 2%;
+    padding: 15px;
+    margin: 2px;
+    text-transform: capitalize;
+  }
+  
+  .btn:hover,
+  .btn-primary:hover {
+    color: var(--primary-color);
+    border: var(--primary-color) solid 5px;
+    background: var(--secondary-color);
+    font-weight: bold;
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+  }
+  
+  .search-style {
+    font-size: 18;
+    font-weight: 500;
+    text-align: center;
+    border: var(--black) solid 2px;
+    height: 50px;
+  }
+  
+  .list-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    list-style-type: none;
+    padding: 25px;
+    background-color: var(--secondary-color);
+    border: var(--black) solid 5px;
+  }
+  
+  .group-list-item {
+    width: 250px;
+    margin: auto;
+  }
+  
+  .modal-content {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  .modal-header {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+  
+  .modal-body {
+    border-top: 5px solid var(--black);
+    border-bottom: 5px solid var(--black);
+    text-align: center;
+  }
+  
+  .modal-img {
+    border: 2px solid var(--black);
+    border-radius: 25%;
+    background-color: var(--secondary-color);
+  }
+  
+  .modal-footer {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+  
+  /* Loading animation styling */
+  #loading-container {
+    display: none;
+  }
+  
+  #loading-container.is-visible {
+    position: fixed;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--black);
+  
+    /* to show it above other content */
+    z-index: 999;
+  
+    /* to allow scrolling if the screen is not high enough*/
+    overflow: auto;
+  
+    /* this is used to center the modal */
+    display: grid;
+    text-align: center;
+  }
