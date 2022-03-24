@@ -116,7 +116,6 @@ let pokemonRepository = (function () {
         modalTitle.append(pokemonName);
         modalBody.append(pokemonHeight);
         modalBody.append(pokemonWeight);
-        modalBody.append(pokemonType);
         modalBody.append(pokemonImage);
     }
 
@@ -126,7 +125,8 @@ let pokemonRepository = (function () {
         addListItem: addListItem,
         loadList: loadList,
         loadDetails: loadDetails,
-        pokemonSearch: pokemonSearch
+        pokemonSearch: pokemonSearch,
+        showModal: showModal
     };
 })();
 
