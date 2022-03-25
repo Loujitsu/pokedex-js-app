@@ -114,10 +114,6 @@ let pokemonRepository = (function () {
         let weightElement = document.createElement('p');
         weightElement.innerText = "Weight: " + weight;
 
-        let typeElement = document.createElement('p');
-        typeElement.innerText = "Type: " + type;
-
-
         //rendering an image of pokemon
         let imageElement = document.createElement('img');
         imageElement.classList.add('pokemon-image-class');
@@ -127,7 +123,6 @@ let pokemonRepository = (function () {
         modal.appendChild(titleElement);
         modal.appendChild(heightElement);
         modal.appendChild(weightElement);
-        modal.appendChild(typeElement);
         modal.appendChild(imageElement);
         modalContainer.appendChild(modal);
 
