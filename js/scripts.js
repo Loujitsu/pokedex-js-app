@@ -44,7 +44,7 @@ let pokemonRepository = (function () {
             return response.json();
         }).then(function (details) {
             // Now we add the details to the item
-            item.imageUrl = details.sprites.front_shiny;
+            item.imageUrl = details.sprites.front_default;
             item.height = details.height;
             item.weight = details.weight;
         }).catch(function (e) {
